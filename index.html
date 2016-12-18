@@ -7,6 +7,11 @@
 </head>
 <body>
   <h2>Photo Editor <span class='hl'>App</span></h2>
+  <form>
+    <label for="url">Image:</label>
+    <input name="url" type="text" placeholder="Enter image URL" />
+    <button>Update Image</button>
+  </form>
 
   <div class="app-container">
     <div class="controls">
@@ -37,7 +42,7 @@
       <label for="blur">Sepia:</label>
       <input type="range" name="sepia" min="0" max="100" value="0" data-unit="%">
 
-      <label for="base">Border Color</label>
+      <label for="base">Base Color</label>
       <input type="color" name="base" value="#ffc600">
     </div>
 

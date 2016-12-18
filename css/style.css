@@ -8,7 +8,7 @@
   --opacity: 100%;
   --saturate: 100%;
   --sepia: 0%;
-  --border: #ffc600;
+  --base: #ffc600;
 }
 
 body {
@@ -17,6 +17,9 @@ body {
   color: white;
   font-family: 'helvetica neue', sans-serif;
   font-weight: 100;
+}
+
+h2 {
   font-size: 50px;
 }
 
@@ -31,8 +34,43 @@ label,input {
 img {
   width: 100%;
   padding: 10px;
-  background: var(--border);
-  filter: blur(var(--blur)) brightness(var(--brightness)) contrast(var(--contrast)) grayscale(var(--grayscale)) hue-rotate(var(--hue)) invert(var(--invert)) opacity(var(--opacity)) saturate(var(--saturate)) sepia(var(--sepia));
+  background: var(--base);
+  filter: blur(var(--blur)) 
+    brightness(var(--brightness)) 
+    contrast(var(--contrast)) 
+    grayscale(var(--grayscale)) 
+    hue-rotate(var(--hue)) 
+    invert(var(--invert)) 
+    opacity(var(--opacity)) 
+    saturate(var(--saturate)) 
+    sepia(var(--sepia));
+}
+
+form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+form input {
+  width: 40%;
+  margin-right: 10px;
+}
+
+form label {
+  margin-right: 10px;
+  font-size: 1.8rem;
+}
+
+form button {
+  padding: 8px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  background-color: var(--base);
 }
 
 .app-container {
@@ -46,7 +84,7 @@ img {
 }
 
 .hl {
-  color: var(--border);
+  color: var(--base);
 }
 
 .controls {
