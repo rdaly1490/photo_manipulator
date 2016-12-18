@@ -1,7 +1,14 @@
 :root {
-  --base: #ffc600;
-  --spacing: 10px;
-  --blur: 10px;
+  --blur: 0px;
+  --brightness: 1;
+  --contrast: 100%;
+  --grayscale: 0%;
+  --hue: 0deg;
+  --invert: 0%;
+  --opacity: 100%;
+  --saturate: 100%;
+  --sepia: 0%;
+  --border: #ffc600;
 }
 
 body {
@@ -13,20 +20,44 @@ body {
   font-size: 50px;
 }
 
-input {
-  width:100px;
+div {
+  display: inline-block;
+}
+
+label,input {
+  display: block;
 }
 
 img {
-  padding: var(--spacing);
-  background: var(--base);
-  filter: blur(var(--blur));
+  width: 100%;
+  padding: 10px;
+  background: var(--border);
+  filter: blur(var(--blur)) brightness(var(--brightness)) contrast(var(--contrast)) grayscale(var(--grayscale)) hue-rotate(var(--hue)) invert(var(--invert)) opacity(var(--opacity)) saturate(var(--saturate)) sepia(var(--sepia));
+}
+
+.app-container {
+  display: flex;
+  flex-direction: row;
+  padding: 0px 25px;
+}
+
+.img-container {
+  width: 70%;
 }
 
 .hl {
-  color: var(--base);
+  color: var(--border);
 }
 
 .controls {
-  margin-bottom: 50px;
+  background-color: #eee;
+  border-radius: 5px;
+  text-align: left;
+  padding: 15px;
+  font-size: 20px;
+  color: #000;
+  height: auto;
+  overflow-y: scroll; 
+  width: 20%;
+  margin-right: 30px;
 }

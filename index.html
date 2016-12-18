@@ -2,24 +2,49 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Photo Manipulator</title>
+  <title>Photo Editor</title>
   <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-  <h2>Photo Manipulator <span class='hl'>App</span></h2>
+  <h2>Photo Editor <span class='hl'>App</span></h2>
 
-  <div class="controls">
-    <label for="spacing">Spacing:</label>
-    <input type="range" name="spacing" min="10" max="200" value="10" data-unit="px">
+  <div class="app-container">
+    <div class="controls">
+      <label for="blur">Blur:</label>
+      <input type="range" name="blur" min="0" max="25" value="0" data-unit="px">
 
-    <label for="blur">Blur:</label>
-    <input type="range" name="blur" min="0" max="25" value="10" data-unit="px">
+      <label for="blur">Brightness:</label>
+      <input type="range" name="brightness" min="0" max="100" value="100">
 
-    <label for="base">Base Color</label>
-    <input type="color" name="base" value="#ffc600">
+      <label for="blur">Contrast:</label>
+      <input type="range" name="contrast" min="0" max="100" value="100" data-unit="%">
+
+      <label for="blur">Grayscale:</label>
+      <input type="range" name="grayscale" min="0" max="100" value="0" data-unit="%">
+
+      <label for="blur">Hue-Rotate:</label>
+      <input type="range" name="hue" min="0" max="360" value="0" data-unit="deg">
+
+      <label for="blur">Invert:</label>
+      <input type="range" name="invert" min="0" max="100" value="0" data-unit="%">
+
+      <label for="blur">Opacity:</label>
+      <input type="range" name="opacity" min="0" max="100" value="100" data-unit="%">
+
+      <label for="blur">Saturate:</label>
+      <input type="range" name="saturate" min="0" max="100" value="100" data-unit="%">
+
+      <label for="blur">Sepia:</label>
+      <input type="range" name="sepia" min="0" max="100" value="0" data-unit="%">
+
+      <label for="base">Border Color</label>
+      <input type="color" name="base" value="#ffc600">
+    </div>
+
+    <div class="img-container">
+      <img src="https://source.unsplash.com/7bwQXzbF6KE/800x500">
+    </div>
   </div>
-
-  <img src="https://source.unsplash.com/7bwQXzbF6KE/800x500">
   <script src="js/index.js"></script>
 </body>
 </html>

@@ -2,7 +2,11 @@ const inputs = document.querySelectorAll('.controls input');
 
 function handleInputUpdate() {
 	const cssUnit = this.dataset.unit || '';
-	document.documentElement.style.setProperty(`--${this.name}`, this.value + cssUnit);
+	let value = this.value;
+	if (this.name === 'brightness') {
+		value = this.value / 100;
+	}
+	document.documentElement.style.setProperty(`--${this.name}`, value + cssUnit);
 }
 
 inputs.forEach(input => input.addEventListener('change', handleInputUpdate));
